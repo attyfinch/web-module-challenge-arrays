@@ -47,10 +47,10 @@ Use the copy function below to do the following:
 
 function copy(array) {
   let arrayCopy = [...array];
-  console.log(arrayCopy);
+  return arrayCopy;
 }
 
-copy(originalFlavors)
+console.log(copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -65,12 +65,10 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(array){
-  if(array.length === 31) {
-    console.log("true");
-  } else ("false");
+  return array.length === 31;
  }
 
- is31Flavors(originalFlavors)
+ console.log(is31Flavors(originalFlavors));
 
 
 
@@ -89,10 +87,11 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(array, newFlavor) {
   array.unshift(newFlavor);
-  console.log(array);
+  // console.log(array);
+  return array;
  }
 
- addFlavor(originalFlavors, 'Rainbow Sherbert');
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -109,10 +108,10 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(array){
  array.pop();
- console.log(array);
+ return array;
 }
 
-removeLastFlavor(originalFlavors);
+console.log(removeLastFlavor(originalFlavors))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -128,10 +127,10 @@ Use the getFlavorByIndex function below to do the following:
 
 
 function getFlavorByIndex(array, bestFlavor) {
-  console.log(array[bestFlavor]);
+  return array[bestFlavor];
 }
 
-getFlavorByIndex(originalFlavors, 10);
+console.log(getFlavorByIndex(originalFlavors, 10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -151,10 +150,10 @@ Use the removeFlavorByName function below to do the following:
 function removeFlavorByName(array, rFlavor) {
   let rFlavorIndex = array.indexOf(rFlavor);
   array.splice(rFlavorIndex, 1);
-  console.log(array);
+  return array;
 }
 
-removeFlavorByName(originalFlavors, 'Eggnog');
+console.log(removeFlavorByName(originalFlavors, 'Eggnog'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -178,15 +177,15 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(array, flavFilter) {
   let filteredArray = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if(array[i].includes(flavFilter)) {
       filteredArray.push(array[i]);
     }
   }
-  console.log(filteredArray);
+  return filteredArray;
 }
 
-filterByWord(originalFlavors, "Chocolate");
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
